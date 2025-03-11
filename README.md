@@ -10,5 +10,6 @@ This decision tree is based on:
 
 # Decision tree diagram
 
-![image](https://github.com/user-attachments/assets/85dce82e-4ee7-4c51-9c46-39dba238a3d9)
+![image](https://github.com/user-attachments/assets/6194167b-79a4-4e4d-b806-44e5bd233a8a)
+
 
