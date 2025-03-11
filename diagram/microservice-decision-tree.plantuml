@@ -1,0 +1,34 @@
+@startuml
+
+start
+
+: Is it independently deployable and scalable?;
+if (Can it function & deploy without affecting others?) then (Yes)
+    if (Does it have distinct scaling needs?) then (Yes)
+        : Does it have a clear business capability or domain boundary?;
+        if (Does it represent a single, well-defined function?) then (Yes)
+            if (Can it be owned & managed independently?) then (Yes)
+                : Does it require high flexibility in technology and development?;
+                if (Would it benefit from a different tech stack or DB?) then (Yes)
+                    if (Does it need to evolve at a different pace?) then (Yes)
+                        : ✅ Microservices might be a good option;
+                    else (No)
+                        : ❌ Microservices may not be a good option (Monolith simplifies development);
+                    endif
+                else (No)
+                    : ❌ Microservices may not be a good option (Monolith simplifies development);
+                endif
+            else (No)
+                : ❌ Microservices may not be a good option (Unclear domain ownership);
+            endif
+        else (No)
+            : ❌ Microservices may not be a good option (Unclear domain ownership);
+        endif
+    else (No)
+        : ❌ Microservices may not be a good option (Monolith preferred);
+    endif
+else (No)
+    : ❌ Microservices may not be a good option (Monolith preferred);
+endif
+
+@enduml
